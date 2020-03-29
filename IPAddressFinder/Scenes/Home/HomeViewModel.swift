@@ -9,7 +9,9 @@
 import Foundation
 
 // MARK: - HomeViewModelProtocol
-protocol HomeViewModelProtocol {}
+protocol HomeViewModelProtocol {
+    func didTapCheckIpAddress(ip: String?)
+}
 
 final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Attributes
@@ -19,4 +21,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
 
     // MARK: - Functions
+    func didTapCheckIpAddress(ip: String?) {
+        
+    }
 }

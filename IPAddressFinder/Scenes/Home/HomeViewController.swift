@@ -14,11 +14,23 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var ipAddress: UITextField!
     @IBOutlet private weak var checkButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - Attributes
+    private var viewModel: HomeViewModelProtocol
+
+    // MARK: - Initializer
+    init(viewModel: HomeViewModelProtocol) {
+        self.viewModel = viewModel
+
+        super.init(nibName: "HomeViewController", bundle: .main)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Actions
     @IBAction private func didTapOnCheckButton(_ sender: UIButton) {
+        viewModel.didTapCheckIpAddress(ip: ipAddress.text)
     }
 }

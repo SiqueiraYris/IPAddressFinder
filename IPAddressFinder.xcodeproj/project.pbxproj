@@ -19,6 +19,9 @@
 		4D3362B5243161B8006A5C9A /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362B4243161B8006A5C9A /* MapViewModel.swift */; };
 		4D3362B8243161C4006A5C9A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362B6243161C4006A5C9A /* MapViewController.swift */; };
 		4D3362B9243161C4006A5C9A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3362B7243161C4006A5C9A /* MapViewController.xib */; };
+		4D3362BD2431629C006A5C9A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362BC2431629C006A5C9A /* Dynamic.swift */; };
+		4D3362BF243162B7006A5C9A /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362BE243162B7006A5C9A /* String+Localization.swift */; };
+		4D3362C1243162CD006A5C9A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C0243162CD006A5C9A /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		4D3362B4243161B8006A5C9A /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		4D3362B6243161C4006A5C9A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4D3362B7243161C4006A5C9A /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		4D3362BC2431629C006A5C9A /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		4D3362BE243162B7006A5C9A /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		4D3362C0243162CD006A5C9A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				4D1DD08C2430164B00B76F2F /* Application */,
+				4D3362BA24316285006A5C9A /* Extensions */,
 				4D1DD0662430163700B76F2F /* LaunchScreen.storyboard */,
 				4D1DD08B2430164100B76F2F /* Resources */,
 				4D1DD08D2430167800B76F2F /* Scenes */,
+				4D3362BB2431628A006A5C9A /* Utils */,
 			);
 			path = IPAddressFinder;
 			sourceTree = "<group>";
@@ -178,6 +186,23 @@
 				4D3362B4243161B8006A5C9A /* MapViewModel.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		4D3362BA24316285006A5C9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D3362BE243162B7006A5C9A /* String+Localization.swift */,
+				4D3362C0243162CD006A5C9A /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D3362BB2431628A006A5C9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D3362BC2431629C006A5C9A /* Dynamic.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,12 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3362C1243162CD006A5C9A /* UIViewController+Extension.swift in Sources */,
 				4D1DD05C2430163400B76F2F /* AppDelegate.swift in Sources */,
 				4D3362B8243161C4006A5C9A /* MapViewController.swift in Sources */,
 				4D3362B5243161B8006A5C9A /* MapViewModel.swift in Sources */,
+				4D3362BD2431629C006A5C9A /* Dynamic.swift in Sources */,
 				4D1DD05E2430163400B76F2F /* SceneDelegate.swift in Sources */,
 				4D1DD0902430169800B76F2F /* HomeViewController.swift in Sources */,
 				4D3362B22431614A006A5C9A /* HomeViewModel.swift in Sources */,
+				4D3362BF243162B7006A5C9A /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
