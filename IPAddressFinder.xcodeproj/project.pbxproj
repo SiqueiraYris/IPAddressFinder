@@ -22,6 +22,14 @@
 		4D3362BD2431629C006A5C9A /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362BC2431629C006A5C9A /* Dynamic.swift */; };
 		4D3362BF243162B7006A5C9A /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362BE243162B7006A5C9A /* String+Localization.swift */; };
 		4D3362C1243162CD006A5C9A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C0243162CD006A5C9A /* UIViewController+Extension.swift */; };
+		4D3362CA24316383006A5C9A /* NetworkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C324316383006A5C9A /* NetworkRoute.swift */; };
+		4D3362CB24316383006A5C9A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C424316383006A5C9A /* NetworkManager.swift */; };
+		4D3362CC24316383006A5C9A /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C524316383006A5C9A /* NetworkManagerProtocol.swift */; };
+		4D3362CD24316383006A5C9A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C624316383006A5C9A /* NetworkError.swift */; };
+		4D3362CF24316383006A5C9A /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362C924316383006A5C9A /* RequestConfiguration.swift */; };
+		4D3362D1243163A3006A5C9A /* ConfigurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362D0243163A3006A5C9A /* ConfigurationConstants.swift */; };
+		4D3362D32431645C006A5C9A /* IPAddressRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362D22431645C006A5C9A /* IPAddressRoute.swift */; };
+		4D3362D52431668B006A5C9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3362D42431668B006A5C9A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		4D3362BC2431629C006A5C9A /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		4D3362BE243162B7006A5C9A /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		4D3362C0243162CD006A5C9A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4D3362C324316383006A5C9A /* NetworkRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRoute.swift; sourceTree = "<group>"; };
+		4D3362C424316383006A5C9A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4D3362C524316383006A5C9A /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		4D3362C624316383006A5C9A /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4D3362C924316383006A5C9A /* RequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
+		4D3362D0243163A3006A5C9A /* ConfigurationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationConstants.swift; sourceTree = "<group>"; };
+		4D3362D22431645C006A5C9A /* IPAddressRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressRoute.swift; sourceTree = "<group>"; };
+		4D3362D42431668B006A5C9A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +132,8 @@
 				4D1DD08C2430164B00B76F2F /* Application */,
 				4D3362BA24316285006A5C9A /* Extensions */,
 				4D1DD0662430163700B76F2F /* LaunchScreen.storyboard */,
+				4D3362D624316703006A5C9A /* Models */,
+				4D3362C224316383006A5C9A /* Network */,
 				4D1DD08B2430164100B76F2F /* Resources */,
 				4D1DD08D2430167800B76F2F /* Scenes */,
 				4D3362BB2431628A006A5C9A /* Utils */,
@@ -145,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1DD0642430163700B76F2F /* Assets.xcassets */,
+				4D3362D42431668B006A5C9A /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,8 +220,37 @@
 			isa = PBXGroup;
 			children = (
 				4D3362BC2431629C006A5C9A /* Dynamic.swift */,
+				4D3362D0243163A3006A5C9A /* ConfigurationConstants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4D3362C224316383006A5C9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4D3362C624316383006A5C9A /* NetworkError.swift */,
+				4D3362C424316383006A5C9A /* NetworkManager.swift */,
+				4D3362C524316383006A5C9A /* NetworkManagerProtocol.swift */,
+				4D3362C324316383006A5C9A /* NetworkRoute.swift */,
+				4D3362C924316383006A5C9A /* RequestConfiguration.swift */,
+				4D3362C724316383006A5C9A /* Routes */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4D3362C724316383006A5C9A /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				4D3362D22431645C006A5C9A /* IPAddressRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		4D3362D624316703006A5C9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3362D52431668B006A5C9A /* Localizable.strings in Resources */,
 				4D1DD0682430163700B76F2F /* LaunchScreen.storyboard in Resources */,
 				4D1DD0652430163700B76F2F /* Assets.xcassets in Resources */,
 				4D1DD0912430169800B76F2F /* HomeViewController.xib in Resources */,
@@ -339,12 +388,19 @@
 			files = (
 				4D3362C1243162CD006A5C9A /* UIViewController+Extension.swift in Sources */,
 				4D1DD05C2430163400B76F2F /* AppDelegate.swift in Sources */,
+				4D3362CF24316383006A5C9A /* RequestConfiguration.swift in Sources */,
+				4D3362CA24316383006A5C9A /* NetworkRoute.swift in Sources */,
 				4D3362B8243161C4006A5C9A /* MapViewController.swift in Sources */,
+				4D3362CB24316383006A5C9A /* NetworkManager.swift in Sources */,
 				4D3362B5243161B8006A5C9A /* MapViewModel.swift in Sources */,
 				4D3362BD2431629C006A5C9A /* Dynamic.swift in Sources */,
+				4D3362D32431645C006A5C9A /* IPAddressRoute.swift in Sources */,
 				4D1DD05E2430163400B76F2F /* SceneDelegate.swift in Sources */,
 				4D1DD0902430169800B76F2F /* HomeViewController.swift in Sources */,
 				4D3362B22431614A006A5C9A /* HomeViewModel.swift in Sources */,
+				4D3362D1243163A3006A5C9A /* ConfigurationConstants.swift in Sources */,
+				4D3362CD24316383006A5C9A /* NetworkError.swift in Sources */,
+				4D3362CC24316383006A5C9A /* NetworkManagerProtocol.swift in Sources */,
 				4D3362BF243162B7006A5C9A /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

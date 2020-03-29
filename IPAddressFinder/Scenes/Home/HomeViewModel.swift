@@ -22,6 +22,10 @@ final class HomeViewModel: HomeViewModelProtocol {
 
     // MARK: - Functions
     func didTapCheckIpAddress(ip: String?) {
-        
+        if let ip = ip, !ip.isEmpty {
+            //continue
+        } else {
+            //show error
+        }
     }
 }
