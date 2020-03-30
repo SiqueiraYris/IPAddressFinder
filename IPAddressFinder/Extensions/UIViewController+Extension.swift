@@ -29,5 +29,6 @@ extension UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem?.tintColor = .black
     }
 }

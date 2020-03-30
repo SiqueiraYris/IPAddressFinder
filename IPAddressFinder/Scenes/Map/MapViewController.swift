@@ -52,6 +52,7 @@ final class MapViewController: UIViewController {
 
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        annotation.title = viewModel.getTitle()
         ipMap.addAnnotation(annotation)
     }
 }

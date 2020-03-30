@@ -11,6 +11,8 @@ import Foundation
 // MARK: - MapViewModelProtocol
 protocol MapViewModelProtocol {
     var ipAddress: IPAddress { get }
+
+    func getTitle() -> String
 }
 
 final class MapViewModel: MapViewModelProtocol {
@@ -20,5 +22,10 @@ final class MapViewModel: MapViewModelProtocol {
     // MARK: - Initializer
     init(ipAddress: IPAddress) {
         self.ipAddress = ipAddress
+    }
+
+    // MARK: - Functions
+    func getTitle() -> String {
+        "\(ipAddress.query) \n\(ipAddress.city) - \(ipAddress.country)"
     }
 }
