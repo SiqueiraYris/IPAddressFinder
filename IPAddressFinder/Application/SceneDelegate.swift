@@ -24,7 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
 
-        let controller = HomeViewController()
+        let viewModel = HomeViewModel()
+        let controller = HomeViewController(viewModel: viewModel)
+
         rootViewController.pushViewController(controller, animated: true)
     }
 

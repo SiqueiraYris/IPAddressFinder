@@ -9,13 +9,13 @@
 import Foundation
 
 enum IPAddressRoute: NetworkRoute {
-    case fetchIpAddress
+    case fetchIpAddress(String)
 
     var configuration: RequestConfiguration {
         switch self {
-        case .fetchIpAddress:
+        case .fetchIpAddress(let IPAddress):
             let config = RequestConfiguration(host: serverHost,
-                                       path: ipPath,
+                                       path: "\(ipPath)/\(IPAddress)",
                                        method: .get,
                                        encoding: .url)
             return config

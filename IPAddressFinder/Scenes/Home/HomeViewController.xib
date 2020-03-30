@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="673-Q0-GgG">
-                    <rect key="frame" x="82" y="275" width="250" height="34"/>
+                    <rect key="frame" x="82" y="280" width="250" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="sM7-s0-7sL"/>
                     </constraints>
@@ -35,8 +35,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-Zb-Wz3">
-                    <rect key="frame" x="184" y="319" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="132" y="339" width="150" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="jKJ-gd-7eT"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="didTapOnCheckButton:" destination="-1" eventType="touchUpInside" id="cr3-gA-wgW"/>
                     </connections>
@@ -45,14 +51,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="2M0-Hh-csw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4Lo-s7-Dri"/>
-                <constraint firstItem="mwX-Zb-Wz3" firstAttribute="top" secondItem="673-Q0-GgG" secondAttribute="bottom" constant="10" id="YSF-24-kA6"/>
+                <constraint firstItem="mwX-Zb-Wz3" firstAttribute="top" secondItem="673-Q0-GgG" secondAttribute="bottom" constant="25" id="YSF-24-kA6"/>
                 <constraint firstItem="673-Q0-GgG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cc3-D8-IUx"/>
-                <constraint firstItem="673-Q0-GgG" firstAttribute="top" secondItem="2M0-Hh-csw" secondAttribute="bottom" constant="10" id="tGF-5o-Tvy"/>
+                <constraint firstItem="673-Q0-GgG" firstAttribute="top" secondItem="2M0-Hh-csw" secondAttribute="bottom" constant="15" id="tGF-5o-Tvy"/>
                 <constraint firstItem="2M0-Hh-csw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="ub5-0y-4ju"/>
                 <constraint firstItem="mwX-Zb-Wz3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="wiH-Xd-R65"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="133" y="83"/>
+            <point key="canvasLocation" x="131.8840579710145" y="82.366071428571431"/>
         </view>
     </objects>
 </document>

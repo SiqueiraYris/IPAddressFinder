@@ -24,4 +24,10 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: String.localized(by: "Ok"), style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+
+    func removeBackButtonText() {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+    }
 }

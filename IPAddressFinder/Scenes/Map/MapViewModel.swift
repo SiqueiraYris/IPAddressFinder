@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+// MARK: - MapViewModelProtocol
+protocol MapViewModelProtocol {
+    var ipAddress: IPAddress { get }
+}
+
+final class MapViewModel: MapViewModelProtocol {
+    // MARK: - Attributes
+    var ipAddress: IPAddress
+
+    // MARK: - Initializer
+    init(ipAddress: IPAddress) {
+        self.ipAddress = ipAddress
+    }
+}

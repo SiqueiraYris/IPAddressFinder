@@ -7,6 +7,13 @@
 */
 
 // MARK: - General
+"Ok" = "Ok";
+"IPAddressFinder" = "IP Address Finder";
+
+// MARK: - HomeViewController
+"EmptyIPAddress"= "Please, insert one IP Address";
+"InsertIPAddress" = "Insert IP Address";
+"CheckIPAddress" = "Check IP Address";
 
 // MARK: - NetworkErrors
 "ConnectionError" = "Please, verify your conection!";
