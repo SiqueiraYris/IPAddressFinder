@@ -10,6 +10,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="IPAddressFinder" customModuleProvider="target">
             <connections>
                 <outlet property="ipMap" destination="kjg-vW-8iD" id="cFX-f2-d4L"/>
+                <outlet property="isp" destination="cMZ-yl-NcI" id="9wk-fy-cxh"/>
+                <outlet property="ispTitle" destination="53L-kj-Qd0" id="nuE-v5-4si"/>
+                <outlet property="timezone" destination="pHs-zY-K5q" id="CMi-6E-ZDu"/>
+                <outlet property="timezoneTitle" destination="fNK-PF-PTA" id="oXb-0L-la8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +23,56 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kjg-vW-8iD">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="141" width="414" height="721"/>
                 </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNK-PF-PTA">
+                    <rect key="frame" x="20" y="64" width="100" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Ara-Gy-zwx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53L-kj-Qd0">
+                    <rect key="frame" x="20" y="100" width="100" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="odt-YD-pw5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHs-zY-K5q">
+                    <rect key="frame" x="140" y="64" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-yl-NcI">
+                    <rect key="frame" x="140" y="100" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fNK-PF-PTA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2Q1-ph-9FY"/>
+                <constraint firstItem="cMZ-yl-NcI" firstAttribute="leading" secondItem="53L-kj-Qd0" secondAttribute="trailing" constant="20" id="53u-wN-bja"/>
+                <constraint firstItem="pHs-zY-K5q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="AE7-1M-16i"/>
+                <constraint firstItem="53L-kj-Qd0" firstAttribute="top" secondItem="fNK-PF-PTA" secondAttribute="bottom" constant="15" id="AND-me-yc3"/>
                 <constraint firstItem="kjg-vW-8iD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dsx-VF-wX9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kjg-vW-8iD" secondAttribute="trailing" id="JU9-Tv-ggF"/>
-                <constraint firstItem="kjg-vW-8iD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PEv-pX-cEC"/>
+                <constraint firstItem="pHs-zY-K5q" firstAttribute="leading" secondItem="fNK-PF-PTA" secondAttribute="trailing" constant="20" id="Kxe-jk-4OB"/>
+                <constraint firstItem="cMZ-yl-NcI" firstAttribute="top" secondItem="pHs-zY-K5q" secondAttribute="bottom" constant="15" id="Sel-tB-9iS"/>
+                <constraint firstItem="53L-kj-Qd0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bKj-cU-dPp"/>
+                <constraint firstItem="kjg-vW-8iD" firstAttribute="top" secondItem="53L-kj-Qd0" secondAttribute="bottom" constant="20" id="lrr-G7-IFq"/>
+                <constraint firstItem="fNK-PF-PTA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="nMu-ue-yWD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kjg-vW-8iD" secondAttribute="bottom" id="uaW-IA-47d"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="133" y="102"/>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
         </view>
     </objects>
 </document>

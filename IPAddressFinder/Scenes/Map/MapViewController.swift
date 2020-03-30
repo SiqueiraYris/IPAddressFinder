@@ -11,6 +11,18 @@ import MapKit
 
 final class MapViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet private weak var timezoneTitle: UILabel! {
+        didSet {
+            timezoneTitle.text = String.localized(by: "Timezone")
+        }
+    }
+    @IBOutlet private weak var ispTitle: UILabel! {
+        didSet {
+            ispTitle.text = String.localized(by: "Isp")
+        }
+    }
+    @IBOutlet private weak var timezone: UILabel!
+    @IBOutlet private weak var isp: UILabel!
     @IBOutlet private weak var ipMap: MKMapView!
 
     // MARK: - Attributes
@@ -34,11 +46,17 @@ final class MapViewController: UIViewController {
 
         setupMapView(latitude: viewModel.ipAddress.lat, longitude: viewModel.ipAddress.lon)
         setupUI()
+        setupBinds()
     }
 
     // MARK: - Functions
     private func setupUI() {
         title = String.localized(by: "IPAddressFinder")
+    }
+
+    private func setupBinds() {
+        timezone.text = viewModel.ipAddress.timezone
+        isp.text = viewModel.ipAddress.isp
     }
 
     private func setupMapView(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {

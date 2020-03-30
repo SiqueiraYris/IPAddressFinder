@@ -15,6 +15,10 @@
 "InsertIPAddress" = "Insert IP Address";
 "CheckIPAddress" = "Check IP Address";
 
+// MARK: - MapViewController
+"Timezone" = "Timezone:";
+"Isp" = "ISP:";
+
 // MARK: - NetworkErrors
 "ConnectionError" = "Please, verify your conection!";
 "ConnectionLostError" = "There was a connection lost";
