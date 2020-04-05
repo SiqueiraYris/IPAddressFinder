@@ -141,7 +141,6 @@
 			children = (
 				4D1DD08C2430164B00B76F2F /* Application */,
 				4D3362BA24316285006A5C9A /* Extensions */,
-				4D1DD0662430163700B76F2F /* LaunchScreen.storyboard */,
 				4D3362D624316703006A5C9A /* Models */,
 				4D3362C224316383006A5C9A /* Network */,
 				4D1DD08B2430164100B76F2F /* Resources */,
@@ -173,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1DD0642430163700B76F2F /* Assets.xcassets */,
+				4D1DD0662430163700B76F2F /* LaunchScreen.storyboard */,
 				4D3362D42431668B006A5C9A /* Localizable.strings */,
 			);
 			path = Resources;
