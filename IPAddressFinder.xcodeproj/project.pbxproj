@@ -14,7 +14,6 @@
 		4D1DD0732430163700B76F2F /* IPAddressFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DD0722430163700B76F2F /* IPAddressFinderTests.swift */; };
 		4D1DD07E2430163700B76F2F /* IPAddressFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DD07D2430163700B76F2F /* IPAddressFinderUITests.swift */; };
 		4D1DD0902430169800B76F2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DD08E2430169800B76F2F /* HomeViewController.swift */; };
-		4D1DD0912430169800B76F2F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD08F2430169800B76F2F /* HomeViewController.xib */; };
 		4D2326702432599F00FAE035 /* URLComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23266F2432599F00FAE035 /* URLComponents+Extension.swift */; };
 		4D23267224325C2D00FAE035 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23267124325C2D00FAE035 /* Data+Extension.swift */; };
 		4D3362B22431614A006A5C9A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362B12431614A006A5C9A /* HomeViewModel.swift */; };
@@ -34,6 +33,8 @@
 		4D3362D52431668B006A5C9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D3362D42431668B006A5C9A /* Localizable.strings */; };
 		4D3362D824317873006A5C9A /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362D724317873006A5C9A /* HomeService.swift */; };
 		4D3362DA24318230006A5C9A /* IPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3362D924318230006A5C9A /* IPAddress.swift */; };
+		4D870CA724393B07004CB28B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D870CA624393B07004CB28B /* HomeView.swift */; };
+		4D870CA924393CB4004CB28B /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D870CA824393CB4004CB28B /* ViewConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,6 @@
 		4D1DD07D2430163700B76F2F /* IPAddressFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressFinderUITests.swift; sourceTree = "<group>"; };
 		4D1DD07F2430163700B76F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1DD08E2430169800B76F2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		4D1DD08F2430169800B76F2F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4D23266F2432599F00FAE035 /* URLComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extension.swift"; sourceTree = "<group>"; };
 		4D23267124325C2D00FAE035 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		4D3362B12431614A006A5C9A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +87,8 @@
 		4D3362D42431668B006A5C9A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4D3362D724317873006A5C9A /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		4D3362D924318230006A5C9A /* IPAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddress.swift; sourceTree = "<group>"; };
+		4D870CA624393B07004CB28B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4D870CA824393CB4004CB28B /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +200,8 @@
 		4D1DD092243016A400B76F2F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4D870CA624393B07004CB28B /* HomeView.swift */,
 				4D1DD08E2430169800B76F2F /* HomeViewController.swift */,
-				4D1DD08F2430169800B76F2F /* HomeViewController.xib */,
 				4D3362B12431614A006A5C9A /* HomeViewModel.swift */,
 				4D3362D724317873006A5C9A /* HomeService.swift */,
 			);
@@ -232,6 +234,7 @@
 			children = (
 				4D3362BC2431629C006A5C9A /* Dynamic.swift */,
 				4D3362D0243163A3006A5C9A /* ConfigurationConstants.swift */,
+				4D870CA824393CB4004CB28B /* ViewConfiguration.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,7 +375,6 @@
 				4D3362D52431668B006A5C9A /* Localizable.strings in Resources */,
 				4D1DD0682430163700B76F2F /* LaunchScreen.storyboard in Resources */,
 				4D1DD0652430163700B76F2F /* Assets.xcassets in Resources */,
-				4D1DD0912430169800B76F2F /* HomeViewController.xib in Resources */,
 				4D3362B9243161C4006A5C9A /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,11 +415,13 @@
 				4D3362D824317873006A5C9A /* HomeService.swift in Sources */,
 				4D1DD0902430169800B76F2F /* HomeViewController.swift in Sources */,
 				4D3362B22431614A006A5C9A /* HomeViewModel.swift in Sources */,
+				4D870CA724393B07004CB28B /* HomeView.swift in Sources */,
 				4D3362D1243163A3006A5C9A /* ConfigurationConstants.swift in Sources */,
 				4D3362CD24316383006A5C9A /* NetworkError.swift in Sources */,
 				4D23267224325C2D00FAE035 /* Data+Extension.swift in Sources */,
 				4D3362CC24316383006A5C9A /* NetworkManagerProtocol.swift in Sources */,
 				4D3362BF243162B7006A5C9A /* String+Localization.swift in Sources */,
+				4D870CA924393CB4004CB28B /* ViewConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

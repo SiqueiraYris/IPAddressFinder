@@ -9,19 +9,13 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    // MARK: - IBOutlets
-    @IBOutlet private weak var titleLabel: UILabel! {
-        didSet {
-            titleLabel.text = String.localized(by: "InsertIPAddress")
-        }
-    }
-    @IBOutlet private weak var ipAddress: UITextField!
-    @IBOutlet private weak var checkButton: UIButton! {
-        didSet {
-            checkButton.setTitle(String.localized(by: "CheckIPAddress"), for: .normal)
-            checkButton.layer.cornerRadius = 10.0
-        }
-    }
+    // MARK: - Components
+    private lazy var homeView: HomeView = {
+        let view = HomeView(with: self)
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
     
     // MARK: - Attributes
     private var viewModel: HomeViewModelProtocol
@@ -30,10 +24,9 @@ final class HomeViewController: UIViewController {
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
 
-        super.init(nibName: "HomeViewController", bundle: .main)
+        super.init(nibName: nil, bundle: nil)
     }
 
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -72,10 +65,31 @@ final class HomeViewController: UIViewController {
 
     private func setupUI() {
         title = String.localized(by: "IPAddressFinder")
+
+        setupViewConfiguration()
+        hideKeyboard()
+    }
+}
+
+// MARK: - ViewConfiguration
+extension HomeViewController: ViewConfiguration {
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            homeView.topAnchor.constraint(equalTo: view.topAnchor),
+            homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 
-    // MARK: - Actions
-    @IBAction private func didTapOnCheckButton(_ sender: UIButton) {
-        viewModel.didTapCheckIpAddress(ip: ipAddress.text)
+    func buildViewHierarchy() {
+        view.addSubview(homeView)
+    }
+}
+
+// MARK: - HomeViewDelegate
+extension HomeViewController: HomeViewDelegate {
+    func onTapCheckButton(ipAddress: String?) {
+        viewModel.didTapCheckIpAddress(ip: ipAddress)
     }
 }
